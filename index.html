@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
+    <title>Mій Ужгород | Головна</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">My Website</a>
+            <a class="navbar-brand" href="/">
+                <img src="/img/uzh.png" height="35" width="35" />
+                Mій Ужгород
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery.html">Галерея</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacts.html">Контакти</a>
+                    </li>
+                </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                    <li id="greeting-link" class="nav-item d-none"></li>
+                    <li id="login-link" class="nav-item d-none">
+                        <a class="nav-link" href="/signin.html">Увійти</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li id="logout-link" class="nav-item d-none">
+                        <a class="nav-link" type="button" class="btn btn-primary" data-toggle="modal" data-target="#logout-modal">Вийти</a>
                     </li>
                 </ul>
             </div>
@@ -34,30 +43,89 @@
     </header>
 
     <section class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>Welcome to My Website</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Sed non mauris vitae erat consequat auctor eu in elit.</p>
+        <div class="row mb-4">
+            <div class="col">
+                <h1>Ласкаво просимо до Ужгорода!</h1>
             </div>
-            <div class="col-md-6">
-                <form>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 order-sm-last">
+                <img src="/img/uzh1.jpg" class="rounded img-fluid" alt="Uzhorod" />
+            </div>
+
+            <div class="col-sm-8">
+                <p>
+                    Запрошуємо вас відкрити вікно до чарівного міста на заході України - Ужгорода! Збережене серцем часом, це місто переплітає в собі багату історію, неймовірну архітектуру та неповторний колорит. Розташоване на мальовничих берегах річки Уж, Ужгород вражає своєю красою та гостинністю.
+                </p>
+                <p>
+                    Вирушайте на екскурсію до відомого замку Свидницького, що датується далеким XIV століттям. Він не лише захоплює своєю старовинною архітектурою, але й дозволить вам зануритися в історію Ужгорода та почути легенди, які зберігаються в його мурах.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 order-sm-first">
+                <img src="/img/uzh2.jpg" class="rounded img-fluid" alt="Uzhorod" />
+            </div>
+
+            <div class="col-sm-8">
+                <p>
+                    Ужгород - місто, де смакують істинну культуру. Поспішайте на ринок "Корзо", щоб насолодитися аутентичними стравами та придбати унікальні ремісничі вироби. Тут ви зможете зануритися в атмосферу традиційного західноукраїнського ринку та поринути в безмежний світ кольорів та ароматів.
+                </p>
+                <p>
+                    Погуляйте вузькими вуличками міста, де кожен камінчик має свою історію, а кожен будинок зберігає легенди минулого. Відвідайте палац Потоцьких, який вражає своєю розкішшю та витонченістю архітектури.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-sm-4 order-sm-last">
+                <img src="/img/uzh3.jpg" class="rounded img-fluid" alt="Uzhorod" />
+            </div>
+
+            <div class="col-sm-8">
+                <p>
+                    Не пропустіть можливість відпочити в оазі природи - Ужанський національний парк. Захоплюючі краєвиди, гірські потоки та мальовничі ліси зроблять ваш відпочинок незабутнім.
+                </p>
+                <p>
+                    Поїздка до Ужгорода - це не лише знайомство з багатою історією та культурою, але й можливість насолодитися активним відпочинком. Місто пропонує різноманітні види розваг, від екскурсій на велосипедах до піших прогулянок в гірських масивах. Зимою Ужгород перетворюється на справжній рай для любителів лиж та сноубордів завдяки своїм гірським схилам та відповідній інфраструктурі.
+                </p>
+
+                <p>
+                    Під час вашого перебування у місті не пропустіть нагоди спробувати найкращі страви західноукраїнської кухні. Ужгород славиться своїми унікальними стравами, серед яких вареники, гуляш та традиційний корчмальний борщ. Завітайте до затишних кафе та ресторанів міста, де вам запропонують справжні смакові відкриття у затишній атмосфері.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-12">
+                <p>
+                    Ласкаво просимо до Ужгорода - дверей до таємничого світу західноукраїнської культури та природи!
+                </p>
             </div>
         </div>
     </section>
+
+    <div class="modal" id="logout-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Ви дійсно бажаете вийти?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="logout()">Підтвердити</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
